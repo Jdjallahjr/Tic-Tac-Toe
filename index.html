@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Game Mode Selection -->
+    <div id="selection-screen" class="screen">
+        <h1>Welcome to JD's Tic Tac Toe</h1>
+        <h2>Choose Game Mode</h2>
+        <button id="one-player">One Player</button>
+        <button id="two-player">Two Players</button>
+        <div id="difficulty" class="hidden">
+            <h2>Select Difficulty</h2>
+            <select id="difficulty-level">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <h2>Choose Your Symbol</h2>
+        <button id="choose-x">X</button>
+        <button id="choose-o">O</button>
+    </div>
+
+    <!-- Game Board -->
+    <div id="game-screen" class="screen hidden">
+        <h1>Tic Tac Toe</h1>
+        <div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <p class="status">Player X's turn</p>
+        <button id="restart">Restart</button>
+        <button id="back">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
