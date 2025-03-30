@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -14,10 +14,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     max-width: 400px;
     width: 90%;
 }
@@ -27,32 +27,38 @@ body {
 }
 
 button {
-    background: #ff4b5c;
+    background: linear-gradient(to right, #4776E6, #8E54E9);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background: #ff2e4d;
+    background: linear-gradient(to right, #3a64d1, #7d47d8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 button.selected {
-    background: #4caf50 !important;
-    color: white;
+    background: linear-gradient(to right, #4CAF50, #2E8B57) !important;
+    box-shadow: 0 4px 8px rgba(46, 139, 87, 0.3);
 }
 
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 5px;
+    gap: 8px;
     margin-top: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .cell {
@@ -61,22 +67,63 @@ button.selected {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffdab9;
-    border-radius: 5px;
-    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    font-size: 2.5rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
 }
 
 .cell:hover {
-    background: #ffc8a2;
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 .status {
-    font-size: 1.2rem;
-    margin-top: 15px;
+    font-size: 1.3rem;
+    margin: 20px 0 10px;
     font-weight: bold;
+    color: #333;
 }
 
+.cell[data-value="X"] {
+    color: #4776E6;
+}
 
+.cell[data-value="O"] {
+    color: #E94C8E;
+}
+
+#difficulty-level {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    background: white;
+    font-size: 1rem;
+    margin: 10px 0;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#difficulty-level:focus {
+    border-color: #8E54E9;
+    box-shadow: 0 0 0 3px rgba(142, 84, 233, 0.2);
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    background: linear-gradient(to right, #4776E6, #8E54E9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
